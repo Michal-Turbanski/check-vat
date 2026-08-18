@@ -1,0 +1,152 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+h1 {
+  color: var(--text-h);
+  font-family: var(--heading);
+  font-size: 1.9rem;
+  margin: 0 0 8px;
+}
+
+.lead {
+  margin: 0 0 24px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font: 16px/1.6 var(--mono);
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+}
+
+textarea:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.controls {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  margin: 16px 0 8px;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
+.controls input[type='date'] {
+  padding: 9px 10px;
+  font: 16px var(--sans);
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  padding: 11px 22px;
+  font: 600 16px var(--sans);
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d33;
+}
+
+.summary {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 28px 0 12px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pill.ok {
+  color: #0a6b3d;
+  background: rgba(16, 185, 129, 0.16);
+}
+
+.pill.warn {
+  color: #8a5a00;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.pill.bad {
+  color: #a11;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.pill.neutral {
+  color: var(--text);
+  background: var(--code-bg);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+td.nip {
+  font-family: var(--mono);
+  color: var(--text-h);
+}
+
+@media (prefers-color-scheme: dark) {
+  .pill.ok {
+    color: #6ee7b7;
+  }
+  .pill.warn {
+    color: #fcd34d;
+  }
+  .pill.bad {
+    color: #fca5a5;
+  }
+}
